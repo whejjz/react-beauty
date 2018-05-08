@@ -6,6 +6,10 @@ import rootStore from './store'
 
 const store = rootStore();
 
+store.subscribe(() => {
+    console.log(store.getState())
+})
+
 const mountNode = document.getElementById('app');
 render(
   <Provider store = { store }>

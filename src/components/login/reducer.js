@@ -10,9 +10,10 @@ function resolveADData(state=[],action) {
       return state
   }
 }
-function resolveULikeData(state=[],action) {
+function loginSuccess(state=[],action) {
   switch (action.type){
     case actionTypes.RES_LOGIN:
+      console.log([...action.data])
       return [...state,...action.data];
     default :
       return state
@@ -21,7 +22,7 @@ function resolveULikeData(state=[],action) {
 
 const rootReducer = combineReducers({
   adData:resolveADData,
-  guessULike:resolveULikeData
+  loginData:loginSuccess
 });
 
 export default rootReducer

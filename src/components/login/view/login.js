@@ -12,8 +12,8 @@ class Login extends PureComponent {
     actions.startLogin('http://apieduexpe.17win.com/api/classroom/list?areacode=650000&')
   }
   render () {
-    const { login, resolveADData } = this.props
-    console.log(login, 222)
+    const { login, loginData } = this.props
+    console.log(login, 11111)
     return (
       <div>welcome home !!!</div>
     )

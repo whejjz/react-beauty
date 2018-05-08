@@ -6,7 +6,7 @@ import { get } from '../../fetchApi/index'
 function* startLogin(url) {
   try {
     let response =  yield call(get, url)
-    console.log(response)
+    yield put(action.loginSuccess(response.data.list))
   } catch (error) {
     console.log('网络故障'+error);
   }finally {
